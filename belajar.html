@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nama Halaman Ini</title>
+</head>
+<body>
+	<div id="app">
+		<form @submit.prevent="products.push({title: product_input})">
+			<input type="text" v-model="product_input">
+			<button>Tambah Produk</button>
+		</form>
+		<ul>
+			<li v-for="product in products">{{product.title}}</li>
+		</ul>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>	
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+				product_input: '',
+				products: [
+					{title: 'Tiny Mall', description: 'Mall kecil'},
+					{title: 'Pancake durian', description: 'Pancake enak'}
+				]
+			}
+		});
+	</script>
+</body>
+</html>
