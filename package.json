@@ -1,0 +1,22 @@
+{
+  "name": "belajar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imam/belajar_kelaspendek.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imam/belajar_kelaspendek/issues"
+  },
+  "homepage": "https://github.com/imam/belajar_kelaspendek#readme",
+  "dependencies": {
+    "parcel-bundler": "^1.12.3"
+  }
+}
