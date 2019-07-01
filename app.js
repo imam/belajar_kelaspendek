@@ -9,7 +9,7 @@ const app = new Vue({
 	mounted() {
 		db
 			.collection("products")
-			.onsnapshot(function(collection) {
+			.onSnapshot(function(collection) {
 				app.products = collection.docs.map(doc => doc.data());
 			});
 	}
