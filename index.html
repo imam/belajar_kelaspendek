@@ -9,22 +9,20 @@
 			<input type="text" v-model="product_input">
 			<button>Tambah Produk</button>
 		</form>
-		<ul>
-			<li v-for="product in products">{{product.title}}</li>
+		<ul v-if="products.length !== 0">
+			<li v-for="product in products">
+                <h3>{{product.title}}</h3>
+                <p>{{product.description}}</p>
+            </li>
 		</ul>
+        <div v-else>Produk sedang loading...</div>
 	</div>
-	<script src="https://cdn.jsdelivr.net/npm/vue"></script>	
-	<script>
-		new Vue({
-			el: '#app',
-			data: {
-				product_input: '',
-				products: [
-					{title: 'Tiny Mall', description: 'Mall kecil'},
-					{title: 'Pancake durian', description: 'Pancake enak'}
-				]
-			}
-		});
-	</script>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/6.2.3/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.2.3/firebase-firestore.js"></script>
+
+	<script src="./app.js"></script>
+
 </body>
 </html>
